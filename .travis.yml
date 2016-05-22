@@ -1,2 +1,3 @@
+#.travis.yml 
 language: C
-script: make
+script: mak
