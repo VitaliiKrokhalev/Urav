@@ -1,4 +1,5 @@
 language: c
 
-script: make sort
-#	- make test
+script:
+  - make sort
+  - make test
