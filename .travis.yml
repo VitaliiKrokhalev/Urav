@@ -1,5 +1,5 @@
 language: c
 
 script:
- -make sort
- -make test
+	-make sort
+	-make test
