@@ -1,27 +1,33 @@
 #include <math.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
- 
-void urav(int a, int b, int c, double D, double *x1, double *x2)
+double urav(int a, int b, int c, double *x1, double *x2)
 {
-    printf ("Введите значение a: ");
-    scanf ("%d", &a);
-    printf ("Введите значение b: ");
-    scanf  ("%d", &b);
-    printf ("Введите значение c: ");
-    scanf ("%d", &c);
-    D = (b*b - 4*a*c);
-    if(D >= 0) //Если дискриминант больше или равен 0
+	double D = (b*b - 4*a*c);
+		printf ("D= %lf \n", D);
+		printf ("a= %d \n", a);
+		printf ("b= %d \n", b);
+		printf ("c= %d \n", c);
+    if(D > 0)
     {
-        *x1 = ( -1*b + sqrt(b*b - 4*a*c) ) / (2 * a);
-        printf ("Первый корень: %d \n", x1);  
+        *x1 = ( -1*b + sqrt(b*b - 4*a*c) ) / (2 * a); 
         *x2 = ( -1*b - sqrt(b*b - 4*a*c) ) / (2 * a);
-        printf ("Второй корень: %d \n", x2);
+        if (x1 > x2){
+			double r = *x1;
+			*x1 = *x2;
+			*x2 = r;
+		}
+			
+		return 2;
     }
-    else
+    printf ("x1= %lf \n", *x1);
+	if(D == 0)
     {
-        printf ("Дискриминант меньше 0, корни невещественные.");
+        *x1 =  -(b / (2 * a));
+        printf ("x1= %lf \n", *x1);
+		return 1;
     }
+
     return 0;
 }

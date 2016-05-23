@@ -1,3 +1,5 @@
 language: c
 
-script: make -f Makefile1.nmk  && make -f Makefile2.nmk
+script:
+ -make sort
+ -make test
