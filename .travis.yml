@@ -1,4 +1,4 @@
-#.travis.yml
+
 language: c
 
-script: make 
+script: make && maketest
