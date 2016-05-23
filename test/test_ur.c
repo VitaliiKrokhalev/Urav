@@ -1,4 +1,4 @@
-#include "fquad.h"
+#include "ur.h"
 #include "ctest.h"
 
 CTEST(quad_suite, test_quad_equation) 
