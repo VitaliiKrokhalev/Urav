@@ -13,7 +13,7 @@ double urav(int a, int b, int c, double *x1, double *x2)
     {
         *x1 = ( -1*b + sqrt(b*b - 4*a*c) ) / (2 * a); 
         *x2 = ( -1*b - sqrt(b*b - 4*a*c) ) / (2 * a);
-        if (x1 > x2){
+        if (*x1 > *x2){
 			double r = *x1;
 			*x1 = *x2;
 			*x2 = r;
