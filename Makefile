@@ -9,6 +9,7 @@ src/ur_2.o: src/ur_2.c
 
 test: test/main.o test/test_ur.o src/ur.o
 	gcc -o wall test/main.o test/test_ur.o src/ur.o -lm
+	./wall
 
 test/main.o: test/main.c
 	gcc -c -o test/main.o test/main.c 
