@@ -1,4 +1,3 @@
-
 language: c
 
-script: make && maketest
+script: make -f Makefile1.nmk  && make -f Makefile2.nmk
